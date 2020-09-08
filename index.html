@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dot Game</title>
+    <link rel="stylesheet" href="dg_r_styles.css">
+</head>
+<body>
+  <h2>Dot Game</h2>
+  <template id="svg-template">   <!-- El template no se dibuja en el DOM-->
+    <svg id="id-svg" height="360" width="360" xmlns="http://www.w3.org/TR/2009/REC-xml-names-20091208/">
+      <circle cx=10 cy="10" r="6" stroke="black" stroke-width="1" fill="rgb(200, 200, 200)"/>
+    </svg> 
+  </template>
+
+  <div class="cls_div_num_of_players">
+    <span>Remote (Localhost)</span>
+   
+  </div>
+  
+  <div  id="id-board" class="cls-board">
+    <div id="id-score" class="cls-score"> 
+      <span id="div-player1" class="cls-players">0</span> <span id="div-player2" class="cls-players">0</span>
+    </div>
+    <button id="id-btn-close" class="btn-restart">Restart</button>
+  </div>
+  
+  <script src="/socket.io/socket.io.js"></script>
+ 
+<script src="dg_r_scripts.js"> </script>
+
+
+</body>
+</html>
